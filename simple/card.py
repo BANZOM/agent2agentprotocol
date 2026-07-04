@@ -10,7 +10,7 @@ def build_agent_card() -> AgentCard:
         description="An agent that greets users by name.",
         version="1.0.0",
         supported_interfaces=[
-            AgentInterface(url=f"http://{HOST}:{PORT}", protocol_binding="jsonrpc/http")
+            AgentInterface(url=f"http://{HOST}:{PORT}", protocol_binding="JSONRPC")
         ],
         capabilities=AgentCapabilities(streaming=False, push_notifications=False),
         skills=[

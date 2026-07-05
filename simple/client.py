@@ -1,4 +1,5 @@
 import asyncio
+import uuid
 
 import httpx
 
@@ -24,7 +25,7 @@ async def main():
         # Send message
         request = SendMessageRequest(
             message=Message(
-                message_id="msg-1",
+                message_id=str(uuid.uuid4()),
                 role=Role.ROLE_USER,
                 parts=[Part(text="Aditya")],
             )
